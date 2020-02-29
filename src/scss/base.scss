@@ -4,7 +4,12 @@
 :root {
 	font-size: 62.5%;
 	user-select: none;
+	// for responsive markup - tunning 1 rem value
+	// @media (max-width: 20rem) {
+	// 	font-size: 52.5%;
+	// }
 }
+
 * {
 	box-sizing: border-box;
 }
