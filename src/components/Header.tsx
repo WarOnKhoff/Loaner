@@ -3,9 +3,32 @@ import logo from '../assets/logo.png'
 import clsx from 'clsx'
 import ContextWrapper from '../context/AppContext'
 
+interface IMenuItem {
+	value: string
+	current: string
+	clickHandler(value: string): void
+}
+
+const MenuItem = ({ value, current, clickHandler }: IMenuItem) => {
+	const link = clsx({
+		linksGroup_item: true,
+		current_page: value === current,
+	})
+	const handleClick = () => {
+		clickHandler(value)
+	}
+	return (
+		<li className={link} onClick={handleClick}>
+			{value}
+		</li>
+	)
+}
+
 const Header: React.FC = () => {
 	const [open, setOpen] = React.useState<boolean>(false)
-	const { theme, setTheme } = useContext(ContextWrapper().AppContext)
+	const { theme, setTheme, page, setPage } = useContext(
+		ContextWrapper().AppContext,
+	)
 	const themeToggler = () => {
 		theme === 'dark' ? setTheme('light') : setTheme('dark')
 	}
@@ -32,10 +55,14 @@ const Header: React.FC = () => {
 			<img src={logo} alt='Loaner logo' className='navbar_logo' />
 			<span className='space' />
 			<ul className={menuList}>
-				<li className='linksGroup_item current_page'>Getting Started</li>
-				<li className='linksGroup_item'>About</li>
-				<li className='linksGroup_item'>Team</li>
-				<li className='linksGroup_item'>Contacts</li>
+				<MenuItem
+					value={'Getting Started'}
+					current={page}
+					clickHandler={setPage}
+				/>
+				<MenuItem value={'About'} current={page} clickHandler={setPage} />
+				<MenuItem value={'Team'} current={page} clickHandler={setPage} />
+				<MenuItem value={'Contacts'} current={page} clickHandler={setPage} />
 			</ul>
 			<i className={menuBtn} onClick={() => setOpen(!open)}>
 				dehaze
