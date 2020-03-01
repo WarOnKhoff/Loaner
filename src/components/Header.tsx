@@ -1,20 +1,32 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import logo from '../assets/logo.png'
 import clsx from 'clsx'
+import ContextWrapper from '../context/AppContext'
 
 const Header: React.FC = () => {
 	const [open, setOpen] = React.useState<boolean>(false)
-	const [lightTheme, setLightTheme] = React.useState<boolean>(false)
+	const { theme, setTheme } = useContext(ContextWrapper().AppContext)
+	const themeToggler = () => {
+		theme === 'dark' ? setTheme('light') : setTheme('dark')
+	}
+
 	const menuList = clsx({
 		linksGroup: true,
 		closed: !open,
 		open: open,
-		menuTheme: open && lightTheme,
+		'menu-lightTheme': theme === 'light',
 	})
 	const navBar = clsx({
 		navbar: true,
-		navTheme: lightTheme,
+		'header-lightTheme': theme === 'light',
 	})
+	const menuBtn = clsx({
+		menuBtn: true,
+		large: true,
+		'material-icons': true,
+		highlightedBtn: open,
+	})
+
 	return (
 		<nav className={navBar}>
 			<img src={logo} alt='Loaner logo' className='navbar_logo' />
@@ -25,13 +37,14 @@ const Header: React.FC = () => {
 				<li className='linksGroup_item'>Team</li>
 				<li className='linksGroup_item'>Contacts</li>
 			</ul>
-			<i className='large material-icons menu' onClick={() => setOpen(!open)}>
+			<i className={menuBtn} onClick={() => setOpen(!open)}>
 				dehaze
 			</i>
 			<input
 				className='modeToggler'
 				type='checkbox'
-				onChange={() => setLightTheme(!lightTheme)}
+				checked={theme === 'light'}
+				onChange={themeToggler}
 			/>
 		</nav>
 	)

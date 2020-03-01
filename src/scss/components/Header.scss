@@ -17,13 +17,17 @@
 		height: 10rem;
 	}
 }
-.menu {
+.menuBtn {
 	color: $lightColor;
 	font-size: 4rem;
 	display: none;
 	@media screen and (max-width: 865px) {
 		display: block;
 	}
+}
+
+.highlightedBtn {
+	color: $secondaryColor;
 }
 
 .linksGroup {
@@ -82,11 +86,11 @@
 	}
 }
 
-.navTheme {
+.header-lightTheme {
 	background: $shadowColor;
 }
 
-.menuTheme {
+.menu-lightTheme {
 	background: $lightColor;
 	color: $primaryColor;
 	@media screen and (min-width: 866px) {
