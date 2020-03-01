@@ -1,0 +1,15 @@
+.main {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	&_group {
+		display: flex;
+		flex-grow: 1;
+		&_item {
+			width: 50%;
+			height: 100%;
+		}
+	}
+}
