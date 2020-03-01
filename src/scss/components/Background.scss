@@ -15,7 +15,6 @@
 		height: 5rem;
 		bottom: -9rem;
 		background-color: $secondaryColor;
-		background-color: rgba($color: $secondaryColor, $alpha: 0.8);
 		opacity: 0.5;
 		display: block;
 		animation: animate 10s linear infinite;
@@ -24,30 +23,35 @@
 			width: 5rem;
 			height: 5rem;
 			animation-delay: 0s;
+			animation-duration: 15s;
 		}
 		&_2 {
 			left: 20%;
 			width: 12rem;
 			height: 12rem;
 			animation-delay: 2s;
+			animation-duration: 5s;
 		}
 		&_3 {
 			left: 46%;
 			width: 8rem;
 			height: 8rem;
 			animation-delay: 3s;
+			animation-duration: 10s;
 		}
 		&_4 {
 			left: 62%;
 			width: 10rem;
 			height: 10rem;
 			animation-delay: 1s;
+			animation-duration: 5s;
 		}
 		&_5 {
 			left: 78%;
 			width: 2rem;
 			height: 2rem;
 			animation-delay: 2s;
+			animation-duration: 10s;
 		}
 		&_6 {
 			left: 94%;
@@ -59,19 +63,21 @@
 			left: 2%;
 			width: 4rem;
 			height: 4rem;
-			animation-delay: 4s;
+			animation-delay: 1s;
+			animation-duration: 10s;
 		}
 		&_8 {
 			left: 50%;
 			width: 10rem;
 			height: 10rem;
 			animation-delay: 7s;
+			animation-duration: 15s;
 		}
 		&_9 {
 			left: 20%;
 			width: 2rem;
 			height: 2rem;
-			animation-delay: 5s;
+			animation-delay: 1s;
 		}
 		&_10 {
 			left: 88%;
@@ -84,11 +90,11 @@
 
 @keyframes animate {
 	0% {
-		transform: translateY(5rem) rotate(0deg);
+		transform: translateY(5rem) rotate(0deg) scale(1);
 		opacity: 1;
 	}
 	100% {
-		transform: translateY(-100vh) rotate(360deg);
-		opacity: 0;
+		transform: translateY(-100vh) rotate(360deg) scale(0.6);
+		opacity: 0.2;
 	}
 }

@@ -3,13 +3,33 @@
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
-	overflow: hidden;
+	transition: background 0.2s;
+	background: rgba($color: $outlineColor, $alpha: 0.8);
+	&_ligthTheme {
+		background: none;
+	}
 	&_group {
 		display: flex;
 		flex-grow: 1;
-		&_item {
-			width: 50%;
+		&_left {
+			flex-grow: 1;
 			height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+		&_right {
+			flex-grow: 1;
 		}
 	}
+}
+
+.capture {
+	font-size: 6rem;
+	letter-spacing: 1.2rem;
+	min-width: 70rem;
+}
+.heroText {
+	color: $secondaryColor;
 }
