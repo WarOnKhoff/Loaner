@@ -1,0 +1,30 @@
+.footer {
+	margin-top: 20rem;
+	width: 100%;
+	height: 9rem;
+	background: $primaryColor;
+	color: $lightColor;
+	display: flex;
+	align-items: center;
+	padding: 0 2rem;
+	justify-content: center;
+	transition: $transition;
+	font-size: 1.8rem;
+
+	&_imgGroup {
+		display: flex;
+	}
+	&_img {
+		width: 4rem;
+		height: 4rem;
+		margin-right: 2rem;
+		transition: $transition;
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+}
+
+.footer_lightTheme {
+	background: $shadowColor;
+}

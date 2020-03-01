@@ -1,7 +1,8 @@
 import React, { useContext } from 'react'
 import logo from '../assets/logo.png'
 import clsx from 'clsx'
-import ContextWrapper from '../context/AppContext'
+import { AppContext } from '../context/AppContext'
+import { ThemeContext } from '../context/ThemeContext'
 
 interface IMenuItem {
 	value: string
@@ -24,14 +25,10 @@ const MenuItem = ({ value, current, clickHandler }: IMenuItem) => {
 	)
 }
 
-const Header: React.FC = () => {
+const Header = () => {
 	const [open, setOpen] = React.useState<boolean>(false)
-	const { theme, setTheme, page, setPage } = useContext(
-		ContextWrapper().AppContext,
-	)
-	const themeToggler = () => {
-		theme === 'dark' ? setTheme('light') : setTheme('dark')
-	}
+	const { page, setPage } = useContext(AppContext)
+	const { theme, themeToggler } = useContext(ThemeContext)
 
 	const menuList = clsx({
 		linksGroup: true,
@@ -67,6 +64,7 @@ const Header: React.FC = () => {
 			<i className={menuBtn} onClick={() => setOpen(!open)}>
 				dehaze
 			</i>
+			<i className='large material-icons togglerIcon'>brightness_6</i>
 			<input
 				className='modeToggler'
 				type='checkbox'

@@ -1,9 +1,7 @@
 import React, { useState } from 'react'
-import { useLocalStorage, useLocalStorageTheme } from './useLocalStorage'
+import { useLocalStorage } from './useLocalStorage'
 
 interface ContextProps {
-	theme: string
-	setTheme(value: string): void
 	loanAmount: number
 	setLoanAmount(value: number): void
 	loanTerm: number
@@ -12,14 +10,20 @@ interface ContextProps {
 	setPage(value: string): void
 }
 
-const ContextWrapper = () => {
-	const [theme, setTheme] = useLocalStorageTheme('theme')
+export const AppContext = React.createContext<ContextProps>({
+	loanAmount: 100,
+	setLoanAmount: () => {},
+	loanTerm: 1,
+	setLoanTerm: () => {},
+	page: 'Getting Started',
+	setPage: () => {},
+})
+
+export const AppContextProvider = (props: React.PropsWithChildren<{}>) => {
 	const [loanAmount, setLoanAmount] = useLocalStorage('loan', 100)
 	const [loanTerm, setLoanTerm] = useLocalStorage('term', 1)
 	const [page, setPage] = useState<string>('Getting Started')
 	const value = {
-		theme,
-		setTheme,
 		loanAmount,
 		setLoanAmount,
 		loanTerm,
@@ -27,10 +31,7 @@ const ContextWrapper = () => {
 		page,
 		setPage,
 	}
-	const AppContext = React.createContext<ContextProps>(value)
-	const AppContextProvider = (props: React.PropsWithChildren<{}>) => (
+	return (
 		<AppContext.Provider value={value}>{props.children}</AppContext.Provider>
 	)
-	return { AppContext, AppContextProvider }
 }
-export default ContextWrapper

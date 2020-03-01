@@ -1,14 +1,16 @@
 .modeToggler {
 	position: relative;
+	cursor: pointer;
 	width: 40px;
 	height: 20px;
 	-webkit-appearance: none;
 	// appearance: none;
 	background: $shadowColor;
 	outline: none;
+	user-select: none;
 	border-radius: 20px;
 	box-shadow: inset 0 0 5px rgba($color: #000000, $alpha: 0.2);
-	transition: 0.5s;
+	// transition: 0.5s;
 	&:checked {
 		background: $lightModeColor;
 	}
@@ -20,10 +22,11 @@
 		height: 20px;
 		border-radius: 50%;
 		transform: scale(1.1);
-		background: $outlineColor;
+		background: $secondaryColor;
+		// background: $outlineColor;
 		top: 0;
 		left: 0;
-		transition: 0.5s;
+		transition: left 0.5s;
 	}
 	&:checked:before {
 		left: 20px;
