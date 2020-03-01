@@ -1,0 +1,96 @@
+.navbar {
+	display: flex;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 90px;
+	width: 100%;
+	padding: 0 2rem;
+	align-items: center;
+	justify-content: center;
+	background: $primaryColor;
+	color: $lightColor;
+	font-size: 1.8rem;
+	transition: all 0.2s;
+	&_logo {
+		width: 10rem;
+		height: 10rem;
+	}
+}
+.menu {
+	color: $lightColor;
+	font-size: 4rem;
+	display: none;
+	@media screen and (max-width: 865px) {
+		display: block;
+	}
+}
+
+.linksGroup {
+	list-style: none;
+	display: flex;
+	margin-right: 5rem;
+	&_item {
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-width: 14rem;
+		text-align: center;
+		transition: font-size 0.3s;
+		&:hover {
+			font-size: 120%;
+			// transform: scale(1.1);
+		}
+	}
+
+	@media screen and (max-width: 865px) {
+		display: none;
+		list-style: none;
+		position: absolute;
+		width: 100%;
+		height: calc(100vh - 90px);
+		display: flex;
+		flex-direction: column;
+		top: 90px;
+		padding: 0;
+		background: $shadowColor;
+		margin: 0;
+		font-size: 3rem;
+		padding: 2rem 0;
+		justify-content: center;
+		align-items: center;
+	}
+}
+.current_page {
+	font-size: 120%;
+	color: $secondaryColor;
+	font-weight: bold;
+	transition: none;
+	&:hover {
+		transform: none;
+	}
+}
+.open {
+	display: flex;
+}
+.closed {
+	display: none;
+	@media screen and (min-width: 866px) {
+		display: flex;
+		background: transparent;
+	}
+}
+
+.navTheme {
+	background: $shadowColor;
+}
+
+.menuTheme {
+	background: $lightColor;
+	color: $primaryColor;
+	@media screen and (min-width: 866px) {
+		color: $lightColor;
+		background: transparent;
+	}
+}

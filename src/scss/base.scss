@@ -5,9 +5,9 @@
 	font-size: 62.5%;
 	user-select: none;
 	// for responsive markup - tunning 1 rem value
-	// @media (max-width: 20rem) {
-	// 	font-size: 52.5%;
-	// }
+	@media (max-width: 800px) {
+		font-size: 50%;
+	}
 }
 
 * {
@@ -23,4 +23,8 @@ body {
 		'Helvetica Neue', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+}
+
+.space {
+	flex-grow: 1;
 }

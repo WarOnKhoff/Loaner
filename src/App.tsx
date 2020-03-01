@@ -1,6 +1,12 @@
 import React from 'react'
-import Init from './components'
+import Header from './components/Header'
 
-const App: React.FC = () => <Init />
+const App: React.FC = () => {
+	return (
+		<>
+			<Header />
+		</>
+	)
+}
 
 export default App
