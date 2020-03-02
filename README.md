@@ -6,6 +6,7 @@
 <br>
 <div align="center">
 <img src="https://img.shields.io/github/last-commit/WarOnKhoff/Loaner.svg">
+<span></span>
 <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/WarOnKhoff/Loaner.svg">
 </div>
 
