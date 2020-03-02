@@ -17,6 +17,9 @@
 		width: 10rem;
 		height: 10rem;
 	}
+	@media (max-width: $bp-medium) {
+		height: 60px;
+	}
 }
 .menuBtn {
 	color: $lightColor;
@@ -55,10 +58,10 @@
 		list-style: none;
 		position: absolute;
 		width: 100%;
-		height: calc(100vh - 90px);
+		height: calc(100vh - 60px);
 		display: flex;
 		flex-direction: column;
-		top: 90px;
+		top: 60px;
 		padding: 0;
 		background: $shadowColor;
 		margin: 0;

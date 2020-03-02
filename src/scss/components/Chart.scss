@@ -12,6 +12,9 @@
 	border-radius: 10px;
 	// height: 70rem;
 	background-color: $lightColor;
+	@media (max-width: $bp-medium) {
+		margin-top: 0;
+	}
 
 	&_btn {
 		outline: none;

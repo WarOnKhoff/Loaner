@@ -14,6 +14,7 @@
 		display: flex;
 		flex-grow: 1;
 		@media (max-width: $bp-medium) {
+			padding-top: 60px;
 			flex-direction: column;
 		}
 		&_left {
@@ -40,9 +41,9 @@
 			align-items: center;
 			padding: 0 8rem;
 			flex-basis: 50%;
-			@media (max-width: $bp-small) {
+			@media (max-width: $bp-medium) {
 				align-items: flex-start;
-				padding: 0 4rem;
+				padding: 2rem 4rem;
 			}
 		}
 	}
@@ -85,6 +86,9 @@
 	}
 	@media (max-width: $bp-medium) {
 		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 		width: 100%;
 	}
 }
