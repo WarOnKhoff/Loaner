@@ -3,8 +3,9 @@
 <img src="https://i.imgur.com/UXn7VU2.jpg"/>
 </a>
 </div>
+<br>
 <div align="center">
-
+<img src="https://img.shields.io/github/last-commit/WarOnKhoff/Loaner.svg">
 <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/WarOnKhoff/Loaner.svg">
 </div>
 
