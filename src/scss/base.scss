@@ -5,8 +5,14 @@
 	font-size: 62.5%;
 	user-select: none;
 	// for responsive markup - tunning 1 rem value
-	@media (max-width: 800px) {
+	@media (max-width: $bp-largest) {
 		font-size: 50%;
+	}
+	@media (max-width: $bp-large) {
+		font-size: 45%;
+	}
+	@media (max-width: $bp-small) {
+		font-size: 25%;
 	}
 }
 

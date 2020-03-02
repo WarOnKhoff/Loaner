@@ -1,6 +1,7 @@
 .navbar {
 	display: flex;
 	position: fixed;
+	z-index: 90;
 	top: 0;
 	left: 0;
 	height: 90px;
@@ -21,7 +22,7 @@
 	color: $lightColor;
 	font-size: 4rem;
 	display: none;
-	@media screen and (max-width: 865px) {
+	@media screen and (max-width: $bp-medium) {
 		display: block;
 	}
 }
@@ -31,6 +32,7 @@
 }
 
 .linksGroup {
+	position: relative;
 	list-style: none;
 	display: flex;
 	margin-right: 5rem;
@@ -42,10 +44,14 @@
 		min-width: 14rem;
 		text-align: center;
 		transition: font-size 0.3s;
+		@media screen and (max-width: $bp-medium) {
+			margin-bottom: 1em;
+		}
 	}
 
-	@media screen and (max-width: 865px) {
+	@media screen and (max-width: $bp-medium) {
 		display: none;
+		z-index: 100;
 		list-style: none;
 		position: absolute;
 		width: 100%;
@@ -60,6 +66,7 @@
 		padding: 2rem 0;
 		justify-content: center;
 		align-items: center;
+		font-size: 3em;
 	}
 }
 .current_page {
@@ -76,7 +83,7 @@
 }
 .closed {
 	display: none;
-	@media screen and (min-width: 866px) {
+	@media screen and (min-width: $bp-medium) {
 		display: flex;
 		background: transparent;
 	}
@@ -94,7 +101,7 @@
 .menu-lightTheme {
 	background: $lightColor;
 	color: $primaryColor;
-	@media screen and (min-width: 866px) {
+	@media screen and (min-width: $bp-medium) {
 		// color: $lightColor;
 		background: transparent;
 	}
