@@ -1,6 +1,6 @@
-<div align="center">
+<div align="center" background="#747572">
 <a href="https://loaner.onrender.com/"> 
-<img src="./src/assets/logo.png"/>
+<img src="https://i.imgur.com/UXn7VU2.jpg"/>
 </a>
 </div>
 <div align="center">
