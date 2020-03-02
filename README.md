@@ -5,7 +5,6 @@
 </div>
 <div align="center">
 
-<img src="https://img.shields.io/github/last-commit/WarOnKhoff/Loaner.svg">
 <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/WarOnKhoff/Loaner.svg">
 </div>
 
@@ -55,6 +54,7 @@ Link on design prototype
 <h2>Dependencies 🛠</h2>
 For styling I choosed <code>SCSS</code> preproccessor. Originally this project was bootstrapped with Create React App TypeScript template.
 For global state management I choosed <code>React Context api</code> and <code>useContext</code> hooks.
+For responsive design I choosed combination of media-quer, rem units and flexbox approaches.
 <hr/>
 
         "@testing-library/jest-dom": "^4.2.4",
