@@ -24,7 +24,7 @@
 
 <div id='general'>
 <h2>General info 💡</h2>
-<p>This SPA is designed and developed  basically for frontend skills showcase. Main focus was to create a master-detail SPA using suggested technology stack and implement it according to the user story and design outline; including responsive adaptations. Also another requirement for this project was to show <code>event binding</code> with inputs and usage of <code>localStorage API</code>. The main motto is to create a lightweight and UX-friendly SPA using React for UI render.p>
+<p>This SPA is designed and developed  basically for frontend skills showcase. Main focus was to create a master-detail SPA using suggested technology stack and implement it according to the user story and design outline; including responsive adaptations. Also another requirement for this project was to show <code>event binding</code> with inputs and usage of <code>localStorage API</code>. The main motto is to create a lightweight and UX-friendly SPA using React for UI render.<p>
 </div>
 <br>
 <div id='goals'>
