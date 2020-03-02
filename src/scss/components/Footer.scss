@@ -25,5 +25,7 @@
 }
 
 .footer_lightTheme {
-	background: $shadowColor;
+	background: $lightModeColor;
+	color: $primaryColor;
+	// background: $shadowColor;
 }

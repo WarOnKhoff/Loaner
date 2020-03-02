@@ -83,7 +83,9 @@
 }
 
 .header-lightTheme {
-	background: $shadowColor;
+	background: $lightModeColor;
+	color: $primaryColor;
+	// background: $shadowColor;
 }
 .togglerIcon {
 	margin-left: 1rem;
@@ -93,7 +95,7 @@
 	background: $lightColor;
 	color: $primaryColor;
 	@media screen and (min-width: 866px) {
-		color: $lightColor;
+		// color: $lightColor;
 		background: transparent;
 	}
 }
