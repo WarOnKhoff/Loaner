@@ -1,6 +1,6 @@
 .footer {
 	width: 100%;
-	height: 9rem;
+	height: 6rem;
 	background: $primaryColor;
 	color: $lightColor;
 	display: flex;
@@ -14,8 +14,8 @@
 		display: flex;
 	}
 	&_img {
-		width: 4rem;
-		height: 4rem;
+		width: 3rem;
+		height: 3rem;
 		margin-right: 2rem;
 		transition: $transition;
 		&:hover {
@@ -27,5 +27,4 @@
 .footer_lightTheme {
 	background: $lightModeColor;
 	color: $primaryColor;
-	// background: $shadowColor;
 }

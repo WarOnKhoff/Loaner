@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useCallback } from 'react'
 import { AppContext } from '../context/AppContext'
 
 const Chart = () => {
@@ -13,10 +13,17 @@ const Chart = () => {
 		return `linear-gradient(90deg, #DA2C38 ${(currentValue / maxValue) *
 			100}%, #747572 ${(currentValue / maxValue) * 100}%)`
 	}
+
 	const handleAmountChange = (e: React.ChangeEvent<HTMLInputElement>) =>
 		setLoanAmount(Number(e.target.value))
+
 	const handleTermChange = (e: React.ChangeEvent<HTMLInputElement>) =>
 		setLoanTerm(Number(e.target.value))
+
+	const getMonthlyPayment = useCallback(() => {
+		// dumb monthly payment calculations
+		return Math.round(loanAmount / loanTerm + (loanAmount / loanTerm) * 0.3)
+	}, [loanTerm, loanAmount])
 
 	return (
 		<div className='chart'>
@@ -27,7 +34,7 @@ const Chart = () => {
 			<div className='slider_wrapper'>
 				<input
 					type='range'
-					min={1}
+					min={100}
 					max={10000}
 					value={loanAmount}
 					className='slider loan'
@@ -60,8 +67,8 @@ const Chart = () => {
 					<div className='summary_group_value'>{loanTerm} months</div>
 				</div>
 				<div className='summary_group'>
-					<div className='summary_group_text'>You must return:</div>
-					<div className='summary_group_value'>7000 EUR</div>
+					<div className='summary_group_text'>Monthly payment:</div>
+					<div className='summary_group_value'>{getMonthlyPayment()} EUR</div>
 				</div>
 			</div>
 			<button className='chart_btn'>Apply</button>
