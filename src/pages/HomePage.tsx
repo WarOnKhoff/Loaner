@@ -11,7 +11,7 @@ const Home = () => {
   const { theme } = useContext(ThemeContext);
   const main = cx({
     main: true,
-    main_ligthTheme: theme === "light"
+    main_ligthTheme: theme === "light",
   });
   return (
     <>
