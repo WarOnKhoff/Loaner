@@ -26,7 +26,7 @@ const Chart = () => {
 	}, [loanTerm, loanAmount])
 
 	return (
-		<div className='chart'>
+		<div className='chart' data-testid='chart'>
 			<div className='headerText'>
 				<h3 className='headerText_1'>How much money do you need?</h3>
 				<h2 className='headerText_2'>Calculate your loan</h2>
