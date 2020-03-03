@@ -1,115 +1,125 @@
 .navbar {
-	display: flex;
-	position: fixed;
-	z-index: 90;
-	top: 0;
-	left: 0;
-	height: 90px;
-	width: 100%;
-	padding: 0 2rem;
-	align-items: center;
-	justify-content: center;
-	background: $primaryColor;
-	color: $lightColor;
-	font-size: 1.8rem;
-	transition: all 0.2s;
-	&_logo {
-		width: 10rem;
-		height: 10rem;
-		@media screen and (max-width: $bp-medium) {
-			width: 7rem;
-			height: 7rem;
-		}
-	}
-	@media (max-width: $bp-medium) {
-		height: 60px;
-	}
+  display: flex;
+  // position: fixed;
+  z-index: 90;
+  top: 0;
+  left: 0;
+  height: 90px;
+  width: 100%;
+  padding: 0 2rem;
+  align-items: center;
+  justify-content: center;
+  background: $primaryColor;
+  color: $lightColor;
+  font-size: 2.4rem;
+  transition: all 0.2s;
+  &_logo {
+    width: 10rem;
+    height: 10rem;
+    @media screen and (max-width: $bp-medium) {
+      width: 7rem;
+      height: 7rem;
+    }
+  }
+  @media (max-width: $bp-medium) {
+    height: 60px;
+  }
 }
 .menuBtn {
-	color: $lightColor;
-	font-size: 4rem;
-	display: none;
-	@media screen and (max-width: $bp-medium) {
-		display: block;
-	}
+  color: $lightColor;
+  font-size: 5rem;
+  display: none;
+  @media screen and (max-width: $bp-medium) {
+    display: flex;
+    height: 100%;
+    align-items: center;
+  }
 }
 
 .highlightedBtn {
-	color: $secondaryColor;
+  color: $secondaryColor;
 }
 
 .linksGroup {
-	position: relative;
-	list-style: none;
-	display: flex;
-	margin-right: 5rem;
-	&_item {
-		cursor: pointer;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		min-width: 14rem;
-		text-align: center;
-		transition: font-size 0.3s;
-		@media screen and (max-width: $bp-medium) {
-			margin-bottom: 1em;
-		}
-	}
+  position: relative;
+  list-style: none;
+  display: flex;
+  margin-right: 5rem;
 
-	@media screen and (max-width: $bp-medium) {
-		display: none;
-		z-index: 100;
-		list-style: none;
-		position: absolute;
-		width: 100%;
-		height: calc(100vh - 60px);
-		display: flex;
-		flex-direction: column;
-		top: 60px;
-		padding: 0;
-		background: $shadowColor;
-		margin: 0;
-		font-size: 3rem;
-		padding: 2rem 0;
-		justify-content: center;
-		align-items: center;
-		font-size: 3em;
-	}
+  &_item {
+    text-decoration: none;
+    text-emphasis: none;
+    text-transform: capitalize;
+    color: $lightColor;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 14rem;
+    text-align: center;
+    transition: font-size 0.3s;
+    &_lightTheme {
+      color: $primaryColor;
+    }
+    @media screen and (max-width: $bp-medium) {
+      margin-bottom: 1em;
+    }
+  }
+
+  @media screen and (max-width: $bp-medium) {
+    display: none;
+    z-index: 100;
+    list-style: none;
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    top: 60px;
+    padding: 0;
+    background: $shadowColor;
+    margin: 0;
+    font-size: 3rem;
+    padding: 2rem 0;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+  }
 }
 .current_page {
-	font-size: 120%;
-	color: $secondaryColor;
-	font-weight: bold;
-	transition: none;
-	&:hover {
-		transform: none;
-	}
+  font-size: 120%;
+  color: $secondaryColor;
+  font-weight: bold;
+  transition: none;
+  &:hover {
+    transform: none;
+  }
 }
 .open {
-	display: flex;
+  display: flex;
 }
 .closed {
-	display: none;
-	@media screen and (min-width: $bp-medium) {
-		display: flex;
-		background: transparent;
-	}
+  display: none;
+  @media screen and (min-width: $bp-medium) {
+    display: flex;
+    background: transparent;
+  }
 }
 
 .header-lightTheme {
-	background: $lightModeColor;
-	color: $primaryColor;
-	// background: $shadowColor;
+  background: $lightModeColor;
+  color: $primaryColor;
+  // background: $shadowColor;
 }
 .togglerIcon {
-	margin-left: 1rem;
+  margin-left: 1rem;
 }
 
 .menu-lightTheme {
-	background: $lightColor;
-	color: $primaryColor;
-	@media screen and (min-width: $bp-medium) {
-		// color: $lightColor;
-		background: transparent;
-	}
+  background: $lightColor;
+  color: $primaryColor;
+  @media screen and (min-width: $bp-medium) {
+    // color: $lightColor;
+    background: transparent;
+  }
 }

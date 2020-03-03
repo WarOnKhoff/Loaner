@@ -1,0 +1,83 @@
+.about {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media (max-width: $bp-medium) {
+    padding-top: 5rem;
+    flex-direction: column;
+  }
+  &_text {
+    font-size: 3.6rem;
+    letter-spacing: 1.1rem;
+    width: 100%;
+    padding: 0 4rem;
+    text-align: center;
+    @media (max-width: $bp-medium) {
+      text-align: center;
+      font-size: 3rem;
+      letter-spacing: normal;
+    }
+  }
+  &_metricks {
+    flex-grow: 1;
+    width: 100%;
+    display: flex;
+    padding: 0 4rem;
+    height: 100%;
+    font-size: 4rem;
+    justify-content: space-around;
+    @media (max-width: $bp-medium) {
+      margin-top: 10rem;
+      font-size: 3rem;
+      flex-grow: 0;
+    }
+    &_capture {
+      display: flex;
+      font-size: 6rem;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      @media (max-width: $bp-medium) {
+        margin-top: 10rem;
+        font-size: 4rem;
+        flex-grow: 0;
+      }
+    }
+    &_row {
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+      padding-right: 2rem;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      border-right: 3px solid $primaryColor;
+      &_item {
+        margin-bottom: 2rem;
+        transition: $transition;
+        cursor: pointer;
+        &:hover {
+          transform: scale(1.1);
+          color: $secondaryColor;
+        }
+      }
+    }
+  }
+}
+
+.companyName {
+  color: $secondaryColor;
+}
+.metric_value {
+  color: $secondaryColor;
+  font-weight: bold;
+  font-size: 8rem;
+  @media (max-width: $bp-medium) {
+    font-size: 6rem;
+  }
+}
+
+.year {
+  font-size: 5rem;
+}
