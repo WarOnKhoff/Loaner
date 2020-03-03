@@ -1,19 +1,12 @@
-import React, { useContext, useCallback } from 'react'
+import React, { useContext, useCallback, ReactElement } from 'react'
 import { AppContext } from '../context/AppContext'
+import Slider from './Slider'
+import ValueCaption from './ValueCaption'
 
-const Chart = () => {
+const Chart = (): ReactElement => {
 	const { loanAmount, setLoanAmount, loanTerm, setLoanTerm } = useContext(
 		AppContext,
 	)
-
-	const getSliderBackground = (
-		currentValue: number,
-		maxValue: number,
-	): string => {
-		return `linear-gradient(90deg, #DA2C38 ${(currentValue / maxValue) *
-			100}%, #747572 ${(currentValue / maxValue) * 100}%)`
-	}
-
 	const handleAmountChange = (e: React.ChangeEvent<HTMLInputElement>) =>
 		setLoanAmount(Number(e.target.value))
 
@@ -32,44 +25,39 @@ const Chart = () => {
 				<h2 className='headerText_2'>Calculate your loan</h2>
 			</div>
 			<div className='slider_wrapper'>
-				<input
-					type='range'
-					min={100}
-					max={10000}
-					value={loanAmount}
-					className='slider loan'
+				<Slider
+					minValue={100}
+					maxValue={10000}
+					currentValue={loanAmount}
 					onChange={handleAmountChange}
-					style={{
-						background: getSliderBackground(loanAmount, 10000),
-					}}
+					selector='loan'
 				/>
 			</div>
 			<div className='slider_wrapper'>
-				<input
-					type='range'
-					min={1}
-					max={48}
-					value={loanTerm}
-					style={{
-						background: getSliderBackground(loanTerm, 48),
-					}}
+				<Slider
+					minValue={1}
+					maxValue={48}
+					currentValue={loanTerm}
 					onChange={handleTermChange}
-					className='slider therm'
+					selector='therm'
 				/>
 			</div>
 			<div className='summary'>
-				<div className='summary_group'>
-					<div className='summary_group_text'>You are getting:</div>
-					<div className='summary_group_value'>{loanAmount} EUR</div>
-				</div>
-				<div className='summary_group'>
-					<div className='summary_group_text'>Terms of use:</div>
-					<div className='summary_group_value'>{loanTerm} months</div>
-				</div>
-				<div className='summary_group'>
-					<div className='summary_group_text'>Monthly payment:</div>
-					<div className='summary_group_value'>{getMonthlyPayment()} EUR</div>
-				</div>
+				<ValueCaption
+					caption='You are getting'
+					value={loanAmount}
+					postfix='EUR'
+				/>
+				<ValueCaption
+					caption='Terms of use'
+					value={loanTerm}
+					postfix={loanTerm > 1 ? 'months' : 'month'}
+				/>
+				<ValueCaption
+					caption='Monthly payment'
+					value={getMonthlyPayment()}
+					postfix='EUR'
+				/>
 			</div>
 			<button className='chart_btn'>Apply</button>
 		</div>

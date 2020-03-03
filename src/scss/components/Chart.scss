@@ -10,12 +10,10 @@
 	box-sizing: border-box;
 	box-shadow: 4px 8px 3px rgba(0, 0, 0, 0.25);
 	border-radius: 10px;
-	// height: 70rem;
 	background-color: $lightColor;
 	@media (max-width: $bp-medium) {
 		margin-top: 0;
 	}
-
 	&_btn {
 		outline: none;
 		text-decoration: none;
@@ -61,17 +59,30 @@
 	width: 100%;
 	justify-content: space-between;
 	margin-bottom: 5rem;
-
 	&_group {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
 		&_text {
 			font-size: 2.2rem;
 			font-weight: bold;
 			color: $primaryColor;
 		}
+		&_flex {
+			display: flex;
+			align-items: center;
+		}
 		&_value {
 			font-weight: bold;
 			font-size: 3.6rem;
 			color: $secondaryColor;
+		}
+		&_postfix {
+			font-size: 3rem;
+			font-weight: bold;
+			color: $primaryColor;
+			margin-left: 1rem;
 		}
 	}
 }
