@@ -1,157 +1,157 @@
 .chart {
-	margin-top: 5rem;
-	width: 100%;
-	padding: 3rem;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;
-	border: 1px solid rgba(0, 0, 0, 0.5);
-	box-sizing: border-box;
-	box-shadow: 4px 8px 3px rgba(0, 0, 0, 0.25);
-	border-radius: 10px;
-	background-color: $lightColor;
-	@media (max-width: $bp-medium) {
-		margin-top: 0;
-	}
-	&_btn {
-		outline: none;
-		text-decoration: none;
-		border: none;
-		width: 18rem;
-		height: 6rem;
-		background-color: $secondaryColor;
-		color: $lightColor;
-		border-radius: 10px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		transition: all 0.3s;
-		cursor: pointer;
-		&:active:focus {
-			outline: none;
-			text-decoration: none;
-			transform: scale(0.9);
-		}
-	}
+  margin-top: 5rem;
+  width: 100%;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  box-shadow: 4px 8px 3px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  background-color: $lightColor;
+  @media (max-width: $bp-medium) {
+    margin-top: 0;
+  }
+  &_btn {
+    outline: none;
+    text-decoration: none;
+    border: none;
+    width: 18rem;
+    height: 6rem;
+    background-color: $secondaryColor;
+    color: $lightColor;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+    cursor: pointer;
+    &:active:focus {
+      outline: none;
+      text-decoration: none;
+      transform: scale(0.9);
+    }
+  }
 }
 
 .headerText {
-	width: 100%;
-	margin-bottom: 5rem;
-	&_1 {
-		margin: 0;
-		width: 100%;
-		text-align: start;
-		font-size: 2.4rem;
-		color: $secondaryColor;
-	}
-	&_2 {
-		margin: 0;
-		width: 100%;
-		text-align: start;
-		font-size: 4.8rem;
-		color: $primaryColor;
-	}
+  width: 100%;
+  margin-bottom: 5rem;
+  &_1 {
+    margin: 0;
+    width: 100%;
+    text-align: start;
+    font-size: 2.4rem;
+    color: $secondaryColor;
+  }
+  &_2 {
+    margin: 0;
+    width: 100%;
+    text-align: start;
+    font-size: 4.8rem;
+    color: $primaryColor;
+  }
 }
 .summary {
-	display: flex;
-	width: 100%;
-	justify-content: space-between;
-	margin-bottom: 5rem;
-	&_group {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		&_text {
-			font-size: 2.2rem;
-			font-weight: bold;
-			color: $primaryColor;
-		}
-		&_flex {
-			display: flex;
-			align-items: center;
-		}
-		&_value {
-			font-weight: bold;
-			font-size: 3.6rem;
-			color: $secondaryColor;
-		}
-		&_postfix {
-			font-size: 3rem;
-			font-weight: bold;
-			color: $primaryColor;
-			margin-left: 1rem;
-		}
-	}
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 5rem;
+  &_group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &_text {
+      font-size: 2.2rem;
+      font-weight: bold;
+      color: $primaryColor;
+    }
+    &_flex {
+      display: flex;
+      align-items: center;
+    }
+    &_value {
+      font-weight: bold;
+      font-size: 3.6rem;
+      color: $secondaryColor;
+    }
+    &_postfix {
+      font-size: 3rem;
+      font-weight: bold;
+      color: $primaryColor;
+      margin-left: 1rem;
+    }
+  }
 }
 
 .slider_wrapper {
-	width: 90%;
-	margin-bottom: 5rem;
+  width: 90%;
+  margin-bottom: 5rem;
 }
 .slider {
-	appearance: none;
-	box-shadow: 0px 1px 10px 0px #333;
-	height: 5rem;
-	width: 100%;
-	height: 2rem;
-	border-radius: 5px;
-	outline: none;
-	&::-webkit-slider-thumb {
-		appearance: none;
-		display: block;
-		width: 3rem;
-		height: 3rem;
-		border-radius: 30%;
-		background-color: $primaryColor;
-	}
-	&:active:focus {
-		outline: none;
-		border: none;
-	}
+  appearance: none;
+  box-shadow: 0px 1px 10px 0px #333;
+  height: 5rem;
+  width: 100%;
+  height: 2rem;
+  border-radius: 5px;
+  outline: none;
+  &::-webkit-slider-thumb {
+    appearance: none;
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 30%;
+    background-color: $primaryColor;
+  }
+  &:active:focus {
+    outline: none;
+    border: none;
+  }
 }
 
-.loan {
-	position: relative;
-	&::before {
-		content: '100 EUR';
-		font-size: 2.5rem;
-		color: #333;
-		position: absolute;
-		display: block;
-		top: 130%;
-		left: 0%;
-	}
-	&::after {
-		content: '10000 EUR';
-		font-size: 2.5rem;
-		color: #333;
-		position: absolute;
-		display: block;
-		top: 130%;
-		right: 0%;
-	}
+.loan_input {
+  position: relative;
+  &::before {
+    content: "100 EUR";
+    font-size: 2.5rem;
+    color: #333;
+    position: absolute;
+    display: block;
+    top: 130%;
+    left: 0%;
+  }
+  &::after {
+    content: "10000 EUR";
+    font-size: 2.5rem;
+    color: #333;
+    position: absolute;
+    display: block;
+    top: 130%;
+    right: 0%;
+  }
 }
-.therm {
-	position: relative;
-	&::before {
-		content: '1 month';
-		font-size: 2.5rem;
-		color: #333;
-		position: absolute;
-		display: block;
-		top: 130%;
-		left: 0%;
-	}
-	&::after {
-		content: '48 months';
-		font-size: 2.5rem;
-		color: #333;
-		position: absolute;
-		display: block;
-		top: 130%;
-		right: 0%;
-	}
+.therm_input {
+  position: relative;
+  &::before {
+    content: "1 month";
+    font-size: 2.5rem;
+    color: #333;
+    position: absolute;
+    display: block;
+    top: 130%;
+    left: 0%;
+  }
+  &::after {
+    content: "48 months";
+    font-size: 2.5rem;
+    color: #333;
+    position: absolute;
+    display: block;
+    top: 130%;
+    right: 0%;
+  }
 }
