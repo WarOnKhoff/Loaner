@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components: Slider Renders correctly 1`] = `
+<div>
+  <input
+    class="slider test-selector"
+    data-testid="test-selector"
+    max="100"
+    min="1"
+    type="range"
+    value="5"
+  />
+</div>
+`;

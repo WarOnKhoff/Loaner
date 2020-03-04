@@ -18,6 +18,7 @@
 <li><a href='#goals'>Project goals</a></li>
 <li><a href='#design'>Project design</a></li>
 <li><a href='#dependencies'>Dependencies</a></li>
+<li><a href='#tests'>Tests</a></li>
 <li><a href='#setup'>Project setup</a></li>
 </ul>
 <hr>
@@ -76,6 +77,14 @@ For responsive design I choosed combination of media-queries, rem units and flex
     	"react-typed": "^1.2.0",
     	"typescript": "~3.7.2"
 
+</div>
+<div id='tests'>
+<h2>Test coverage 🕵🏻</h2>
+Covered primary Chart / Slider functionality with unit tests(more details at <code>src/__tests___</code>).
+<br>
+Test coverage:
+<br>
+<img src="https://i.imgur.com/DRc9Ayd.jpg">
 </div>
 <div id='setup'>
 <h2>Project Setup 🔌</h2>

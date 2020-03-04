@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components: ValueCaption Renders correctly 1`] = `
+<div>
+  <div
+    class="summary_group"
+  >
+    <div
+      class="summary_group_text"
+      data-testid="capture_text"
+    />
+    <div
+      class="summary_group_flex"
+    >
+      <div
+        class="summary_group_value"
+      />
+      <div
+        class="summary_group_postfix"
+        data-testid="capture_postfix"
+      />
+    </div>
+  </div>
+</div>
+`;
