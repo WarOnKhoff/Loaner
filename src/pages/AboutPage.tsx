@@ -1,28 +1,28 @@
-import React, { useContext } from "react";
-import Footer from "../components/Footer";
-import Background from "../components/Background";
-import { ThemeContext } from "../context/ThemeContext";
-import Header from "../components/Header";
-import cx from "clsx";
-import { useCountUp } from "react-countup";
+import React, { useContext } from "react"
+import Footer from "../components/Footer"
+import Background from "../components/Background"
+import { ThemeContext } from "../context/ThemeContext"
+import Header from "../components/Header"
+import cx from "clsx"
+import { useCountUp } from "react-countup"
 
 const Home = () => {
-  const { theme } = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext)
   const main = cx({
     main: true,
     main_ligthTheme: theme === "light"
-  });
+  })
 
   const { countUp, update } = useCountUp({
     start: 2506,
     end: 2506,
     delay: 300,
     duration: 3
-  });
+  })
 
   const handleHover = (value: number) => {
-    update(value);
-  };
+    update(value)
+  }
   return (
     <section className={main}>
       <Header />
@@ -69,7 +69,7 @@ const Home = () => {
       <Footer />
       <Background />
     </section>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

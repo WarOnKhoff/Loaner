@@ -1,15 +1,15 @@
-import React, { useContext } from "react";
-import logo from "../assets/logo.png";
-import clsx from "clsx";
-import { AppContext } from "../context/AppContext";
-import { ThemeContext } from "../context/ThemeContext";
-import { Link } from "react-router-dom";
+import React, { useContext } from "react"
+import logo from "../assets/logo.png"
+import clsx from "clsx"
+import { AppContext } from "../context/AppContext"
+import { ThemeContext } from "../context/ThemeContext"
+import { Link } from "react-router-dom"
 
 interface IMenuItem {
-  value: string;
-  current: string;
-  clickHandler(value: string): void;
-  lightTheme: boolean;
+  value: string
+  current: string
+  clickHandler(value: string): void
+  lightTheme: boolean
 }
 
 const MenuItem = ({ value, current, clickHandler, lightTheme }: IMenuItem) => {
@@ -17,40 +17,40 @@ const MenuItem = ({ value, current, clickHandler, lightTheme }: IMenuItem) => {
     linksGroup_item: true,
     linksGroup_item_lightTheme: lightTheme,
     current_page: value === current
-  });
+  })
   const handleClick = () => {
-    clickHandler(value);
-  };
+    clickHandler(value)
+  }
   return (
     <Link to={value.toLowerCase()} className={link} onClick={handleClick}>
       {value}
     </Link>
-  );
-};
+  )
+}
 
 const Header = () => {
-  const [open, setOpen] = React.useState<boolean>(false);
-  const { page, setPage } = useContext(AppContext);
-  const { theme, themeToggler } = useContext(ThemeContext);
+  const [open, setOpen] = React.useState<boolean>(false)
+  const { page, setPage } = useContext(AppContext)
+  const { theme, themeToggler } = useContext(ThemeContext)
 
-  const lightTheme = theme === "light";
+  const lightTheme = theme === "light"
 
   const menuList = clsx({
     linksGroup: true,
     closed: !open,
     open: open,
     "menu-lightTheme": lightTheme
-  });
+  })
   const navBar = clsx({
     navbar: true,
     "header-lightTheme": lightTheme
-  });
+  })
   const menuBtn = clsx({
     menuBtn: true,
     large: true,
     "material-icons": true,
     highlightedBtn: open
-  });
+  })
 
   return (
     <nav className={navBar}>
@@ -93,7 +93,7 @@ const Header = () => {
         onChange={themeToggler}
       />
     </nav>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

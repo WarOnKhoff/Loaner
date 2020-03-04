@@ -1,10 +1,10 @@
-import React, { FC, ReactElement } from "react";
+import React, { FC, ReactElement } from "react"
 
 interface IProps {
-  caption: string;
-  value: number;
-  postfix?: string;
-  testId?: string;
+  caption: string
+  value: number
+  postfix?: string
+  testId?: string
 }
 const ValueCaption: FC<IProps> = ({
   caption,
@@ -25,6 +25,6 @@ const ValueCaption: FC<IProps> = ({
       </div>
     </div>
   </div>
-);
+)
 
-export default React.memo(ValueCaption);
+export default React.memo(ValueCaption)

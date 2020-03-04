@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react"
 
 export function useLocalStorage(
   localStorageKey: string,
@@ -6,12 +6,12 @@ export function useLocalStorage(
 ): [number, React.Dispatch<number>] {
   const [value, setValue] = useState<number>(
     Number(localStorage.getItem(localStorageKey)) || defaultValue || 0
-  );
+  )
   useEffect(() => {
-    localStorage.setItem(localStorageKey, value.toString());
-  }, [value, localStorageKey]);
+    localStorage.setItem(localStorageKey, value.toString())
+  }, [value, localStorageKey])
 
-  return [value, setValue];
+  return [value, setValue]
 }
 
 export function useLocalStorageTheme(
@@ -19,10 +19,10 @@ export function useLocalStorageTheme(
 ): [string, React.Dispatch<string>] {
   const [value, setValue] = useState<string>(
     localStorage.getItem(localStorageKey) || "dark"
-  );
+  )
 
   useEffect(() => {
-    localStorage.setItem(localStorageKey, value.toString());
-  }, [value, localStorageKey]);
-  return [value, setValue];
+    localStorage.setItem(localStorageKey, value.toString())
+  }, [value, localStorageKey])
+  return [value, setValue]
 }

@@ -1,8 +1,8 @@
-import React from "react";
-import HomePage from "./pages/HomePage";
-import AboutPage from "./pages/AboutPage";
-import UnderConstruction from "./pages/UnderConstruction";
-import { Switch, Route, Redirect } from "react-router-dom";
+import React from "react"
+import HomePage from "./pages/HomePage"
+import AboutPage from "./pages/AboutPage"
+import UnderConstruction from "./pages/UnderConstruction"
+import { Switch, Route, Redirect } from "react-router-dom"
 
 const App: React.FC = () => {
   return (
@@ -24,7 +24,7 @@ const App: React.FC = () => {
       </Route>
       <Redirect to="/" />
     </Switch>
-  );
-};
+  )
+}
 
-export default App;
+export default App

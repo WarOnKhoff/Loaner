@@ -1,11 +1,11 @@
-import React, { FC, ReactElement, ChangeEvent } from "react";
+import React, { FC, ReactElement, ChangeEvent } from "react"
 
 interface IProps {
-  minValue: number;
-  maxValue: number;
-  currentValue: number;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  selector?: string;
+  minValue: number
+  maxValue: number
+  currentValue: number
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
+  selector?: string
 }
 const Slider: FC<IProps> = ({
   minValue,
@@ -16,7 +16,7 @@ const Slider: FC<IProps> = ({
 }: IProps): ReactElement => {
   const getSliderBackground = (): string =>
     `linear-gradient(90deg, #DA2C38 ${(currentValue / maxValue) *
-      100}%, #747572 ${(currentValue / maxValue) * 100}%)`;
+      100}%, #747572 ${(currentValue / maxValue) * 100}%)`
   return (
     <input
       type="range"
@@ -30,7 +30,7 @@ const Slider: FC<IProps> = ({
       className={`slider ${selector}`}
       data-testid={selector}
     />
-  );
-};
+  )
+}
 
-export default React.memo(Slider);
+export default React.memo(Slider)

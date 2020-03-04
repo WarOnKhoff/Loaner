@@ -1,18 +1,18 @@
-import React, { useContext } from "react";
-import Footer from "../components/Footer";
-import Background from "../components/Background";
-import Chart from "../components/Chart";
-import { ThemeContext } from "../context/ThemeContext";
-import Header from "../components/Header";
-import Typed from "react-typed";
-import cx from "clsx";
+import React, { useContext } from "react"
+import Footer from "../components/Footer"
+import Background from "../components/Background"
+import Chart from "../components/Chart"
+import { ThemeContext } from "../context/ThemeContext"
+import Header from "../components/Header"
+import Typed from "react-typed"
+import cx from "clsx"
 
 const Home = () => {
-  const { theme } = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext)
   const main = cx({
     main: true,
-    main_ligthTheme: theme === "light",
-  });
+    main_ligthTheme: theme === "light"
+  })
   return (
     <>
       <section className={main}>
@@ -56,7 +56,7 @@ const Home = () => {
         <Background />
       </section>
     </>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

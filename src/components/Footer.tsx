@@ -1,16 +1,16 @@
-import React, { useContext } from "react";
-import facebookLogo from "../assets/FacebookW.png";
-import instagramLogo from "../assets/Instagram.png";
-import linkedinLogo from "../assets/LinkedINW.png";
-import { ThemeContext } from "../context/ThemeContext";
-import clsx from "clsx";
+import React, { useContext } from "react"
+import facebookLogo from "../assets/FacebookW.png"
+import instagramLogo from "../assets/Instagram.png"
+import linkedinLogo from "../assets/LinkedINW.png"
+import { ThemeContext } from "../context/ThemeContext"
+import clsx from "clsx"
 
 const Footer = () => {
-  const { theme } = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext)
   const footer = clsx({
     footer: true,
     footer_lightTheme: theme === "light"
-  });
+  })
   return (
     <footer className={footer}>
       <p>Loaner © {new Date().getFullYear()}. All rights reserved.</p>
@@ -51,7 +51,7 @@ const Footer = () => {
         </a>
       </div>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

@@ -1,22 +1,22 @@
-import React, { useContext, useCallback, ReactElement } from "react";
-import { AppContext } from "../context/AppContext";
-import Slider from "./Slider";
-import ValueCaption from "./ValueCaption";
+import React, { useContext, useCallback, ReactElement } from "react"
+import { AppContext } from "../context/AppContext"
+import Slider from "./Slider"
+import ValueCaption from "./ValueCaption"
 
 const Chart = (): ReactElement => {
   const { loanAmount, setLoanAmount, loanTerm, setLoanTerm } = useContext(
     AppContext
-  );
+  )
   const handleAmountChange = (e: React.ChangeEvent<HTMLInputElement>) =>
-    setLoanAmount(Number(e.target.value));
+    setLoanAmount(Number(e.target.value))
 
   const handleTermChange = (e: React.ChangeEvent<HTMLInputElement>) =>
-    setLoanTerm(Number(e.target.value));
+    setLoanTerm(Number(e.target.value))
 
   const getMonthlyPayment = useCallback(() => {
     // dumb monthly payment calculations
-    return Math.round(loanAmount / loanTerm + (loanAmount / loanTerm) * 0.3);
-  }, [loanTerm, loanAmount]);
+    return Math.round(loanAmount / loanTerm + (loanAmount / loanTerm) * 0.3)
+  }, [loanTerm, loanAmount])
 
   return (
     <div className="chart" data-testid="chart">
@@ -63,7 +63,7 @@ const Chart = (): ReactElement => {
       </div>
       <button className="chart_btn">Apply</button>
     </div>
-  );
-};
+  )
+}
 
-export default Chart;
+export default Chart
