@@ -41,6 +41,7 @@
 <li>Implement custom UI components like slider / toggler ✅</li>
 <li>Implement dark / light mode ✅</li>
 <li>Implement custom animation using CSS ✅</li>
+<li>Covered main Slider functionality with unit tests ✅</li>
 </ol>
 </div>
 <br>
