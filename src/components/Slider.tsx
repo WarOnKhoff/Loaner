@@ -1,4 +1,4 @@
-import React, { FC, ReactElement } from 'react'
+import React, { FC, ReactElement, ChangeEvent } from 'react'
 
 interface IProps {
 	minValue: number
@@ -17,7 +17,6 @@ const Slider: FC<IProps> = ({
 	const getSliderBackground = (): string =>
 		`linear-gradient(90deg, #DA2C38 ${(currentValue / maxValue) *
 			100}%, #747572 ${(currentValue / maxValue) * 100}%)`
-
 	return (
 		<input
 			type='range'

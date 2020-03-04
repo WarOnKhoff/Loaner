@@ -12,7 +12,7 @@ const ValueCaption: FC<IProps> = ({
 }: IProps): ReactElement => (
 	<div className='summary_group'>
 		<div className='summary_group_text' data-testid='capture_text'>
-			{caption}:
+			{caption}
 		</div>
 		<div className='summary_group_flex'>
 			<div className='summary_group_value' data-testid='capture_value'>
