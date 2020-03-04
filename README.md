@@ -80,7 +80,7 @@ For responsive design I choosed combination of media-queries, rem units and flex
 </div>
 <div id='tests'>
 <h2>Test coverage 🕵🏻</h2>
-Covered primary Chart / Slider functionality with unit tests(more details at <code>src/__tests___</code>).
+        Covered primary <b>Chart / Slider / ValueCaption</b> functionality with unit tests(more details at <code>src/__tests___</code>).
 <br>
 Test coverage:
 <br>
